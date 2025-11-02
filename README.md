@@ -22,3 +22,16 @@ uv self update
 
 uv sync
 ```
+
+As we are not using Open AI paid versions, Using Ollama 3.2
+The following command 
+
+
+```
+ollama pull llama3.2
+
+ollama run llama3.2
+
+```
+
+
