@@ -34,4 +34,9 @@ ollama run llama3.2
 
 ```
 
+In Cursor Install the followign extensions
+
+Python
+
+Jupyter
 
