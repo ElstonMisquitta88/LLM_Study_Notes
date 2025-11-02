@@ -13,4 +13,12 @@ ollama run gemma3:270m
 
 Cursor Terminal
 In Powershell - Installation of UV
+```
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+Then Run the following 
+```
+uv self update
+
+uv sync
+```
