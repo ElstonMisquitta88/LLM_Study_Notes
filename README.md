@@ -54,6 +54,15 @@ Basic Function Created
 
 
 ```
+ website = fetch_website_contents(url)
+    response = openai.chat.completions.create(
+        model = "gpt-4.1-mini",
+        messages = messages_for(website)
+    )
+    return response.choices[0].message.content
+```
+
+```
 Final Display
 ```
 
