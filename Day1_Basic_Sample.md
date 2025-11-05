@@ -74,6 +74,19 @@ Final Display
 ```
 # Elston's Work
 
+# imports
+
+import os
+from dotenv import load_dotenv
+from scraper import fetch_website_contents
+from IPython.display import Markdown, display
+from openai import OpenAI
+
+load_dotenv(override=True)
+api_key = os.getenv('OPENAI_API_KEY')
+openai = OpenAI()
+
+
 # Step 1: Create your prompts
 system_prompt_email = """
 You are a smart assistant that analyzes the contents of a email,
