@@ -69,6 +69,50 @@ Final Display
 
 <img width="1048" height="690" alt="image" src="https://github.com/user-attachments/assets/70ad2c87-9269-46c2-81ed-19d32b54726c" />
 
+#### Example Tried Out in Cursor
+
+```
+# Elston's Work
+
+# Step 1: Create your prompts
+system_prompt_email = """
+You are a smart assistant that analyzes the contents of a email,
+and provides a summary and next step professional response to the same also with a new email subject
+Respond in markdown. Do not wrap the markdown in a code block - respond just with the markdown.
+"""
+user_prompt_email = """
+Dear Elston
+Good Afternoon!
+We have checked the status with Bluedart for the subject order and they confirm the shipment has been fully damaged and cannot be delivered to the customer.
+We are sending you a replacement for the same through Bluedart AWB 123456
+Kindly confirm upon the receipt of the same.
+We are extremely sorry for the inconvenience caused.
+Thank you very much.
+Kind Regards, 
+Customer Care Executive
+"""
+
+# Step 2: Make the messages list
+
+messages_email = [ {"role": "system", "content": system_prompt_email},
+ {"role": "user", "content": user_prompt_email}]
+
+# Step 3: Call OpenAI
+emailresponse=response = openai.chat.completions.create(
+        model = "gpt-4.1-mini",
+        messages = messages_email
+    )
+
+# Step 4: print the result
+
+Markdown(emailresponse.choices[0].message.content)
+```
+
+#### Example Output
+
+<img width="1516" height="431" alt="image" src="https://github.com/user-attachments/assets/94d7aaf9-9c19-438c-8e94-5234618494f1" />
+
+
 
 
 
