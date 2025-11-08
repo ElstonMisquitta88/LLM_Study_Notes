@@ -2,6 +2,11 @@ LLM Engineering: Master AI, Large Language Models & Agents
 
 #### Installed Ollama and from Powershell ran the following commands
 
+
+🧠 Command meaning: ollama serve
+
+**ollama serve** is the command that starts the Ollama server process on your computer — it’s what allows other applications (like Cursor, VS Code, Jupyter, or APIs) to connect to your local large language models.
+
 ```
 ollama serve
 ollama run gemma3:270m
